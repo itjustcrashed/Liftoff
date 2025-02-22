@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE2F3E4F2D6A4DBF00FBB654 /* Glur in Frameworks */ = {isa = PBXBuildFile; productRef = AE2F3E4E2D6A4DBF00FBB654 /* Glur */; };
 		AE4B61CB2D6A39D6001AA6C4 /* WhatsNewKit in Frameworks */ = {isa = PBXBuildFile; productRef = AE4B61CA2D6A39D6001AA6C4 /* WhatsNewKit */; };
 		AE5FCC362D62E5C200A966FA /* Launcher in Frameworks */ = {isa = PBXBuildFile; productRef = AE5FCC352D62E5C200A966FA /* Launcher */; };
 /* End PBXBuildFile section */
@@ -31,6 +32,7 @@
 			files = (
 				AE4B61CB2D6A39D6001AA6C4 /* WhatsNewKit in Frameworks */,
 				AE5FCC362D62E5C200A966FA /* Launcher in Frameworks */,
+				AE2F3E4F2D6A4DBF00FBB654 /* Glur in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +78,7 @@
 			packageProductDependencies = (
 				AE5FCC352D62E5C200A966FA /* Launcher */,
 				AE4B61CA2D6A39D6001AA6C4 /* WhatsNewKit */,
+				AE2F3E4E2D6A4DBF00FBB654 /* Glur */,
 			);
 			productName = Liftoff;
 			productReference = AEC0DAFE2D610976001E8787 /* Liftoff.app */;
@@ -107,6 +110,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				AE4B61C92D6A39D6001AA6C4 /* XCRemoteSwiftPackageReference "WhatsNewKit" */,
+				AE2F3E4D2D6A4DBF00FBB654 /* XCRemoteSwiftPackageReference "Glur" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = AEC0DAFF2D610976001E8787 /* Products */;
@@ -341,6 +345,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		AE2F3E4D2D6A4DBF00FBB654 /* XCRemoteSwiftPackageReference "Glur" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/joogps/Glur.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.4;
+			};
+		};
 		AE4B61C92D6A39D6001AA6C4 /* XCRemoteSwiftPackageReference "WhatsNewKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SvenTiigi/WhatsNewKit.git";
@@ -352,6 +364,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		AE2F3E4E2D6A4DBF00FBB654 /* Glur */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AE2F3E4D2D6A4DBF00FBB654 /* XCRemoteSwiftPackageReference "Glur" */;
+			productName = Glur;
+		};
 		AE4B61CA2D6A39D6001AA6C4 /* WhatsNewKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = AE4B61C92D6A39D6001AA6C4 /* XCRemoteSwiftPackageReference "WhatsNewKit" */;

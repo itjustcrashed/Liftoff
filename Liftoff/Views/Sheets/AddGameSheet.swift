@@ -111,7 +111,7 @@ struct AddGameSheet: View {
                     let game = Game(
                         title: self.title,
                         system: self.system,
-                        path: self.path
+                        url: self.path
                     )
 
                     if !summary.isEmpty {

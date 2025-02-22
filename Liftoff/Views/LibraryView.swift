@@ -21,10 +21,10 @@ struct LibraryView: View {
                             Text(game.title)
                                 .contextMenu {
                                     Button("Play", systemImage: "play") {
-                                        GameLauncher.launch(game.path, system: game.system)
+                                        GameLauncher.launch(game.url, system: game.system)
                                     }
                                     Button("Reveal in Finder", systemImage: "folder") {
-                                        GameLauncher.revealInFinder(game.path)
+                                        GameLauncher.revealInFinder(game.url)
                                     }
                                     Button("Remove from Library", systemImage: "trash", role: .destructive) {
                                         // TODO: Add alert to this button that says, "Are you sure you want to delete this game?"

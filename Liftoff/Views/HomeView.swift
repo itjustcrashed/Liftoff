@@ -10,11 +10,8 @@ import SwiftUI
 struct HomeView: View {
     var body: some View {
         NavigationStack {
-            ContentUnavailableView(
-                "Not Implemented",
-                systemImage: "square.dashed"
-            )
-            .navigationTitle("Home")
+            GameCard(game: .jellyCar, thumnail: Image(.jellyCarCard))
+                .navigationTitle("Home")
         }
     }
 }
