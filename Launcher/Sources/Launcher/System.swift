@@ -13,6 +13,8 @@ public enum System: Identifiable, Codable, CaseIterable {
     case nativeApp
     /// A native Mach-O executable.
     case nativeExecutable
+    /// A native Steam app.
+    case steamApp
     /// A Windows EXE file.
     case windowsExecutable
 
@@ -24,6 +26,8 @@ public enum System: Identifiable, Codable, CaseIterable {
             return "Native App"
         case .nativeExecutable:
             return "Native Executable"
+        case .steamApp:
+            return "Steam App"
         case .windowsExecutable:
             return "Windows Executable"
         }

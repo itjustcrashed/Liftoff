@@ -1,0 +1,228 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "Add a Game" : {
+
+    },
+    "Add Banner Art" : {
+
+    },
+    "Add Cover Art" : {
+
+    },
+    "Add Game" : {
+
+    },
+    "Add games you've installed to your library so Liftoff can manage them." : {
+
+    },
+    "Add Logo Art" : {
+
+    },
+    "An error has occured" : {
+
+    },
+    "An error occurred while adding your selected art." : {
+
+    },
+    "app.settings" : {
+      "comment" : "The settings window title",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Settings"
+          }
+        }
+      }
+    },
+    "app.title" : {
+      "comment" : "The title of the app. It shouldn't be changed unless absolutely necessary.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Liftoff"
+          }
+        }
+      }
+    },
+    "Arguments" : {
+
+    },
+    "Cancel" : {
+
+    },
+    "Choose..." : {
+
+    },
+    "Command Line Arguments" : {
+
+    },
+    "command.add_game" : {
+      "comment" : "The command in the menu bar that presents a dialog to add a game.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add Game"
+          }
+        }
+      }
+    },
+    "command.open_storage" : {
+      "comment" : "The command in the menu bar that opens the app's Application Support directory.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open Storage Directory"
+          }
+        }
+      }
+    },
+    "command.reload_library" : {
+      "comment" : "The command in the menu bar that reloads the data from the app's library directory.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reload Library"
+          }
+        }
+      }
+    },
+    "command.settings" : {
+      "comment" : "The command in the menu bar that opens the Settings window.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Settings…"
+          }
+        }
+      }
+    },
+    "Couldn't Add Banner Art" : {
+
+    },
+    "Couldn't Add Cover Art" : {
+
+    },
+    "Couldn't Add Logo Art" : {
+
+    },
+    "Extra Info" : {
+
+    },
+    "Get Started" : {
+
+    },
+    "Home" : {
+
+    },
+    "Install" : {
+
+    },
+    "Install Whisky" : {
+
+    },
+    "JellyCar Worlds" : {
+
+    },
+    "Library" : {
+
+    },
+    "Library Empty" : {
+
+    },
+    "Liftoff is not affiliated with Whisky." : {
+
+    },
+    "More Systems" : {
+
+    },
+    "Not Implemented" : {
+
+    },
+    "placeholder.arguments" : {
+      "comment" : "A placeholder for the command-line arguments (CLI) text field.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "-xyz"
+          }
+        }
+      }
+    },
+    "Play" : {
+
+    },
+    "Refresh" : {
+
+    },
+    "Remove from Library" : {
+
+    },
+    "Reveal in Finder" : {
+
+    },
+    "Select a Category" : {
+
+    },
+    "Steam App ID" : {
+
+    },
+    "Summary" : {
+
+    },
+    "System" : {
+
+    },
+    "Systems" : {
+
+    },
+    "tab.home" : {
+      "comment" : "The title of the Home tab.",
+      "extractionState" : "manual",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Home"
+          }
+        }
+      }
+    },
+    "tab.library" : {
+      "comment" : "The title of the Library tab.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Library"
+          }
+        }
+      }
+    },
+    "tab.systems" : {
+      "comment" : "The title of the Systems tab.",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Systems"
+          }
+        }
+      }
+    },
+    "Title" : {
+
+    },
+    "Whisky allows you to use your Mac to play many Windows games seamlessly. Liftoff can manage games using whisky in addition to native games." : {
+
+    }
+  },
+  "version" : "1.0"
+}

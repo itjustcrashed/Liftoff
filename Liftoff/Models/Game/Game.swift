@@ -14,16 +14,18 @@ class Game: Identifiable, Codable {
     var summary: String?
     var lastPlayedDate: Date?
     var system: System
-    var url: URL
+    var url: URL?
     var arguments: String?
+    var steamAppID: String?
 
     init(
         title: String,
         summary: String? = nil,
         lastPlayedDate: Date? = nil,
         system: System,
-        url: URL,
-        arguments: String? = nil
+        url: URL? = nil,
+        arguments: String? = nil,
+        steamAppID: String? = nil
     ) {
         self.id = UUID()
         self.title = title
@@ -32,27 +34,8 @@ class Game: Identifiable, Codable {
         self.system = system
         self.url = url
         self.arguments = arguments
+        self.steamAppID = steamAppID
     }
-}
 
-// MARK: - DEBUG
-extension Game {
-    static var jellyCar: Game {
-        let game = Game(
-            title: "JellyCar Worlds",
-            summary: "It's a Car, made of Jelly! Squishy Physics, Tactile, Silly & Imaginative Driving/Platforming",
-            system: .nativeApp,
-            url: URL(filePath: "/Applications/JellyCar Worlds.app")!
-        )
-        
-        if !FileManager.default.fileExists(atPath: game.url.path()) {
-            do {
-                try FileManager.default.createDirectory(atPath: game.url.path(), withIntermediateDirectories: true)
-            } catch {
-                fatalError(error.localizedDescription)
-            }
-        }
-        
-        return game
-    }
+    func data() -> GameData { .init(self) }
 }

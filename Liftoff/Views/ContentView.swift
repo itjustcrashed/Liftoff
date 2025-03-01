@@ -37,5 +37,6 @@ struct ContentView: View {
             }
         }
         .tabViewStyle(.sidebarAdaptable)
+        .toolbarBackgroundVisibility(.hidden, for: .windowToolbar)
     }
 }

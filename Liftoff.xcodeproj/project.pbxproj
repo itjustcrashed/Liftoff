@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE1EEC102D738A9800624DDE /* Auth in Frameworks */ = {isa = PBXBuildFile; productRef = AE1EEC0F2D738A9800624DDE /* Auth */; };
+		AE1EEC122D738A9800624DDE /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = AE1EEC112D738A9800624DDE /* Supabase */; };
 		AE2F3E4F2D6A4DBF00FBB654 /* Glur in Frameworks */ = {isa = PBXBuildFile; productRef = AE2F3E4E2D6A4DBF00FBB654 /* Glur */; };
-		AE4B61CB2D6A39D6001AA6C4 /* WhatsNewKit in Frameworks */ = {isa = PBXBuildFile; productRef = AE4B61CA2D6A39D6001AA6C4 /* WhatsNewKit */; };
 		AE5FCC362D62E5C200A966FA /* Launcher in Frameworks */ = {isa = PBXBuildFile; productRef = AE5FCC352D62E5C200A966FA /* Launcher */; };
 /* End PBXBuildFile section */
 
@@ -30,8 +31,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE4B61CB2D6A39D6001AA6C4 /* WhatsNewKit in Frameworks */,
+				AE1EEC122D738A9800624DDE /* Supabase in Frameworks */,
 				AE5FCC362D62E5C200A966FA /* Launcher in Frameworks */,
+				AE1EEC102D738A9800624DDE /* Auth in Frameworks */,
 				AE2F3E4F2D6A4DBF00FBB654 /* Glur in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -39,11 +41,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AE1EEBFB2D73834B00624DDE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AEC0DAF52D610975001E8787 = {
 			isa = PBXGroup;
 			children = (
 				AE5FCC342D62E5B800A966FA /* Launcher */,
 				AEC0DB002D610976001E8787 /* Liftoff */,
+				AE1EEBFB2D73834B00624DDE /* Frameworks */,
 				AEC0DAFF2D610976001E8787 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -77,8 +87,9 @@
 			name = Liftoff;
 			packageProductDependencies = (
 				AE5FCC352D62E5C200A966FA /* Launcher */,
-				AE4B61CA2D6A39D6001AA6C4 /* WhatsNewKit */,
 				AE2F3E4E2D6A4DBF00FBB654 /* Glur */,
+				AE1EEC0F2D738A9800624DDE /* Auth */,
+				AE1EEC112D738A9800624DDE /* Supabase */,
 			);
 			productName = Liftoff;
 			productReference = AEC0DAFE2D610976001E8787 /* Liftoff.app */;
@@ -109,8 +120,8 @@
 			mainGroup = AEC0DAF52D610975001E8787;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				AE4B61C92D6A39D6001AA6C4 /* XCRemoteSwiftPackageReference "WhatsNewKit" */,
 				AE2F3E4D2D6A4DBF00FBB654 /* XCRemoteSwiftPackageReference "Glur" */,
+				AE1EEC0E2D738A9800624DDE /* XCRemoteSwiftPackageReference "supabase-swift" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = AEC0DAFF2D610976001E8787 /* Products */;
@@ -202,6 +213,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -258,6 +270,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 			};
 			name = Release;
 		};
@@ -278,6 +291,8 @@
 				INFOPLIST_KEY_CFBundleDisplayName = Liftoff;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -286,6 +301,8 @@
 				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.itjustcrashed.Plans.Liftoff;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = macosx;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -308,6 +325,8 @@
 				INFOPLIST_KEY_CFBundleDisplayName = Liftoff;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -316,6 +335,8 @@
 				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.itjustcrashed.Plans.Liftoff;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = macosx;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -345,6 +366,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		AE1EEC0E2D738A9800624DDE /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/supabase/supabase-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.5.1;
+			};
+		};
 		AE2F3E4D2D6A4DBF00FBB654 /* XCRemoteSwiftPackageReference "Glur" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/joogps/Glur.git";
@@ -353,26 +382,23 @@
 				minimumVersion = 1.0.4;
 			};
 		};
-		AE4B61C92D6A39D6001AA6C4 /* XCRemoteSwiftPackageReference "WhatsNewKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SvenTiigi/WhatsNewKit.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.2.1;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		AE1EEC0F2D738A9800624DDE /* Auth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AE1EEC0E2D738A9800624DDE /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Auth;
+		};
+		AE1EEC112D738A9800624DDE /* Supabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AE1EEC0E2D738A9800624DDE /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Supabase;
+		};
 		AE2F3E4E2D6A4DBF00FBB654 /* Glur */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = AE2F3E4D2D6A4DBF00FBB654 /* XCRemoteSwiftPackageReference "Glur" */;
 			productName = Glur;
-		};
-		AE4B61CA2D6A39D6001AA6C4 /* WhatsNewKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = AE4B61C92D6A39D6001AA6C4 /* XCRemoteSwiftPackageReference "WhatsNewKit" */;
-			productName = WhatsNewKit;
 		};
 		AE5FCC352D62E5C200A966FA /* Launcher */ = {
 			isa = XCSwiftPackageProductDependency;

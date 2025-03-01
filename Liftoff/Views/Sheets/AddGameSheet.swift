@@ -19,9 +19,10 @@ struct AddGameSheet: View {
     @State var title: String = ""
     @State var summary: String = ""
     @State var system: System = .nativeApp
-    @State var path: URL = URL(fileURLWithPath: "/Applications/Finder.app")
+    @State var url: URL = URL(fileURLWithPath: "/Applications/Finder.app")
     @State var includeArguments: Bool = false
     @State var arguments: String = ""
+    @State var steamAppID: String = ""
 
     @State var fileImporterIsPresented: Bool = false
 
@@ -58,25 +59,29 @@ struct AddGameSheet: View {
                         Text(system.displayName)
                     }
                 }
-                // MARK: - Path
-                HStack {
-                    Text(path.relativePath)
-                        .fontDesign(.monospaced)
-                    Spacer()
-                    Button("Choose...") {
-                        fileImporterIsPresented = true
-                    }
-                    .fileImporter(
-                        isPresented: $fileImporterIsPresented,
-                        allowedContentTypes: [.application, .executable, .exe]
-                    ) { result in
-                        switch result {
-                        case .failure(let error):
-                            print("\(error)")
-                        case .success(let path):
-                            self.path = path
+                // MARK: - Path/Steam App ID
+                if system != .steamApp {
+                    HStack {
+                        Text(url.relativePath)
+                            .fontDesign(.monospaced)
+                        Spacer()
+                        Button("Choose...") {
+                            fileImporterIsPresented = true
+                        }
+                        .fileImporter(
+                            isPresented: $fileImporterIsPresented,
+                            allowedContentTypes: [.application, .executable, .exe]
+                        ) { result in
+                            switch result {
+                            case .failure(let error):
+                                print("\(error)")
+                            case .success(let url):
+                                self.url = url
+                            }
                         }
                     }
+                } else {
+                    TextField("Steam App ID", text: $steamAppID)
                 }
             }
             // MARK: - Arguments
@@ -87,7 +92,7 @@ struct AddGameSheet: View {
                         TextField(
                             "Arguments",
                             text: $arguments,
-                            prompt: Text("--option")
+                            prompt: Text("placeholder.arguments")
                         )
                     }
                 }
@@ -111,7 +116,7 @@ struct AddGameSheet: View {
                     let game = Game(
                         title: self.title,
                         system: self.system,
-                        url: self.path
+                        url: self.url
                     )
 
                     if !summary.isEmpty {
@@ -121,7 +126,13 @@ struct AddGameSheet: View {
                     if includeArguments {
                         game.arguments = arguments
                     }
-
+                    
+                    if system != .steamApp {
+                        game.url = url
+                    } else {
+                        game.steamAppID = steamAppID
+                    }
+                    
                     do {
                         try library.addGame(game)
                     } catch {

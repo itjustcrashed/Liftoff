@@ -12,6 +12,13 @@ struct SettingsView: View {
         NavigationSplitView {
             List {
                 SettingsLink(
+                    "Profile",
+                    systemImage: "person.crop.circle.fill",
+                    color: .accentColor
+                ) {
+                    ProfileSettings()
+                }
+                SettingsLink(
                     "Appearance",
                     systemImage: "sun.max",
                     color: .blue

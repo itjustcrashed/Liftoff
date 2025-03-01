@@ -15,11 +15,11 @@ enum Tabs {
     
     var id: Self { self }
     
-    var title: String {
+    var title: LocalizedStringKey {
         switch self {
-        case .home: "Home"
-        case .library: "Library"
-        case .systems: "Systems"
+        case .home: "tab.home"
+        case .library: "tab.library"
+        case .systems: "tab.systems"
         }
     }
     
